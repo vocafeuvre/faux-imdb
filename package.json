@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test npx mocha tests/feature -t 15000 --exit",
-    "start": "NODE_ENV=dev node index.js"
+    "start": "NODE_ENV=dev node index.js",
+    "seed": "NODE_ENV=dev npx md-seed run"
   },
   "keywords": [
     "imdb",
