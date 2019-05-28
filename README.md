@@ -2,7 +2,7 @@
 API replicating simple features of iMDB. Written in Node.js, using Express. Tests are written in Mocha-Chai.
 
 ### How to use
-Before using the API, you should set the environment variables first. The API needs the .env files for both dev and test environments. A .env.default template is provided for the required env variables.
+Before using the API, you should set the environment variables first. The API needs the .env files for both dev and test environments. A .env.default template is provided for the required env variables. Also, do an npm install to download all needed packages.
 
 * PORT (optional): this tells the server on which port should the app listen. Default is 3000.
 
