@@ -30,8 +30,8 @@ const MovieSchema = new mongoose.Schema({
   }
 });
 
-MovieSchema.pre("save", next => {
-    let now = Date.now()
+MovieSchema.pre("save", function(next) {
+    var now = Date.now()
 
     if (!this.createdAt) {
         this.createdAt = now
