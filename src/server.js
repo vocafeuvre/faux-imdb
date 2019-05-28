@@ -1,18 +1,23 @@
-const express = require("express")
-const cors = require("cors")
-const bodyParser = require("body-parser")
-const mongoose = require("mongoose")
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
-mongoose.connect(process.env.MONGO_URL)
+const movieActions = require("./actions/movies")
 
-const app = express()
+dotenv.config();
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
 
-app.use(cors())
-app.use(bodyParser.json())
+const app = express();
+
+app.use(cors());
+app.use(bodyParser.json());
+
+// Handle the movies endpoint
+app.use("/movies", movieActions)
 
 // For pre-flight requests
-app.options("*", cors())
+app.options("*", cors());
 
-module.exports = {
-    app
-}
+module.exports = app;
