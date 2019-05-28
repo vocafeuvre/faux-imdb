@@ -38,7 +38,6 @@ describe("Movie Details", function() {
       .end(function(err, res) {
         if (err) {
           console.log(err);
-          done(err);
         }
 
         // check if response body has valid structure
