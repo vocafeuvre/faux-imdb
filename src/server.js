@@ -1,13 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
 
 const movieActions = require("./actions/movies")
-
-dotenv.config();
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
 
 const app = express();
 
