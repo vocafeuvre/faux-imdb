@@ -28,8 +28,9 @@ module.exports = function(req, res) {
               movie: movieDetails(savedMovie)
             }
           });
+        } else {
+          res.status(404).send(Constant.NOT_FOUND_REQUEST_MESSAGE);
         }
-        res.status(404).send(Constant.NOT_FOUND_REQUEST_MESSAGE);
       }
     });
   }
